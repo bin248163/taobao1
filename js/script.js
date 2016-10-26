@@ -38,13 +38,13 @@ $(function() {
 	
 	var 
 		 index = 0 ;
-		Swidth = 1180 ;
+		Swidth = 950 ;
 		 timer = null ;
-		   len = $(".gd_title span a").length ; 
+		   len = $(".gd_main-div").length;
 		
 		function NextPage()
 		{	
-			if(index>2)
+			if(index>len - 1)
 			{
 				index = 0 ;
 			}
@@ -96,13 +96,8 @@ $(function() {
      //首页tab1
 	
 
-	var $tabList = $('#tablist1 ul li');
-	var $tab = $('#tab1');
-	$tabList.hover(function() {
-		$(this).addClass('this').siblings().removeClass('this');
-		var index = $tabList.index(this);
-		$tab.find('>div').eq(index).show().siblings().hide();
-	})
+	var $tabList = $('.case a');
+	var $tab = $('.case-w');
 	$tabList.click(function() {
 			$(this).addClass('this').siblings().removeClass('this');
 			var index = $tabList.index(this);
